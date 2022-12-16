@@ -21,10 +21,12 @@ int main() {
   */
 
   // Read data from file
-  const string data_file_in {"data_in.txt"};
-  const string data_file_out {"data_out.txt"};
+  const string data_file_in {"data_in.txt"};   // Raw address in
+  const string data_file_out {"data_out.txt"}; // Delta calculations
+  const string data_file_out_formated {"data_out_formated.txt"}; // [] format when needed
   ifstream data_file_ifs {data_file_in};
   ofstream data_file_ofs {data_file_out};
+  ofstream data_file_out_formated_ofs {data_file_out_formated};
   {
     string str_read;
     unsigned int line {0};
@@ -67,8 +69,23 @@ int main() {
       cout << "di[" << line << "] == " << table_raw_str_in[line] \
         << " Size of in uint_32 == " << dx/4 << ". " \
         << " Size of in bytes == " << dx << endl;
-      // Store
+      // Store deltas
       data_file_ofs << table_raw_str_in[line] << " " << dx/4 << endl;
+      // Store formated
+      {
+        if (dx/4 == 1) {
+          string line_str {"VAR"};
+          line_str += to_string(line);
+          data_file_out_formated_ofs << line_str << endl;
+        } else {
+          string line_str {"VAR"};
+          line_str += to_string(line);
+          line_str += "[";
+          line_str += to_string(dx/4);
+          line_str += "]";
+          data_file_out_formated_ofs << line_str << endl;
+        }
+      }
       // Reinit
       i_prec = i;
       line++;
