@@ -1,0 +1,3 @@
+apm -H
+clang++ main.cpp 
+apm -L
