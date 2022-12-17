@@ -1,106 +1,122 @@
-VAR0
-VAR1
-VAR2[2]
-VAR3
-VAR4[4]
-VAR5[7]
-VAR6
-VAR7[8]
-VAR8[8]
-VAR9[16]
-VAR10[8]
-VAR11
-VAR12
-VAR13
-VAR14
-VAR15
-VAR16[2]
-VAR17
-VAR18
-VAR19[4]
-VAR20
-VAR21
-VAR22
-VAR23[8]
-VAR24[15]
-VAR25
-VAR26
-VAR27[2]
-VAR28
-VAR29
-VAR30
-VAR31
-VAR32
-VAR33
-VAR34
-VAR35
-VAR36[4]
-VAR37
-VAR38[16]
-VAR39
-VAR40
-VAR41
-VAR42
-VAR43
-VAR44
-VAR45
-VAR46
-VAR47
-VAR48
-VAR49
-VAR50
-VAR51
-VAR52
-VAR53
-VAR54
-VAR55
-VAR56
-VAR57
-VAR58
-VAR59
-VAR60
-VAR61
-VAR62
-VAR63
-VAR64
-VAR65
-VAR66
-VAR67[4]
-VAR68
-VAR69
-VAR70
-VAR71
-VAR72
-VAR73
-VAR74
-VAR75[2]
-VAR76
-VAR77
-VAR78
-VAR79
-VAR80
-VAR81
-VAR82
-VAR83
-VAR84
-VAR85
-VAR86
-VAR87
-VAR88
-VAR89
-VAR90[72]
-VAR91
-VAR92
-VAR93
-VAR94
-VAR95
-VAR96
-VAR97[123]
-VAR98
-VAR99
-VAR100
-VAR101
-VAR102
-VAR103
-VAR104
-VAR105
+volatile uint32_t EIR; // 0x4
+volatile uint32_t EIMR; // 0x8
+volatile uint32_t RESERVED0; // 0xC
+volatile uint32_t RDAR; // 0x10
+volatile uint32_t TDAR; // 0x14
+volatile uint32_t RESERVED1[3]; // 0x18
+volatile uint32_t ECR; // 0x24 Ethernet_Control_Register
+volatile uint32_t RESERVED2[6]; // 0x28
+volatile uint32_t MMFR; // 0x40
+volatile uint32_t MSCR; // 0x44
+volatile uint32_t RESERVED3[7]; // 0x48
+volatile uint32_t MIBC; // 0x64
+volatile uint32_t RESERVED4[7]; // 0x68
+volatile uint32_t RCR; // 0x84
+volatile uint32_t RESERVED5[15]; // 0x88
+volatile uint32_t TCR; // 0xC4
+volatile uint32_t RESERVED6[7]; // 0xC8
+volatile uint32_t PALR; // 0xE4
+volatile uint32_t PAUR; // 0xE8
+volatile uint32_t OPD; // 0xEC
+volatile uint32_t TXIC0; // 0xF0
+volatile uint32_t TXIC1; // 0xF4
+volatile uint32_t TXIC2; // 0xF8
+volatile uint32_t RESERVED7; // 0xFC
+volatile uint32_t RXIC0; // 0x100
+volatile uint32_t RXIC1; // 0x104
+volatile uint32_t RXIC2; // 0x108
+volatile uint32_t RESERVED8[3]; // 0x10C
+volatile uint32_t IAUR; // 0x118
+volatile uint32_t IALR; // 0x11C
+volatile uint32_t GAUR; // 0x120
+volatile uint32_t GALR; // 0x124
+volatile uint32_t RESERVED9[7]; // 0x128
+volatile uint32_t TFWR; // 0x144
+volatile uint32_t RESERVED10[14]; // 0x148
+volatile uint32_t RDSR; // 0x180
+volatile uint32_t TDSR; // 0x184
+volatile uint32_t MRBR[2]; // 0x188
+volatile uint32_t RSFL; // 0x190
+volatile uint32_t RSEM; // 0x194
+volatile uint32_t RAEM; // 0x198
+volatile uint32_t RAFL; // 0x19C
+volatile uint32_t TSEM; // 0x1A0
+volatile uint32_t TAEM; // 0x1A4
+volatile uint32_t TAFL; // 0x1A8
+volatile uint32_t TIPG; // 0x1AC
+volatile uint32_t FTRL; // 0x1B0
+volatile uint32_t RESERVED11[3]; // 0x1B4
+volatile uint32_t TACC; // 0x1C0
+volatile uint32_t RACC; // 0x1C4
+volatile uint32_t RESERVED12[15]; // 0x1C8
+volatile uint32_t RMON_T_PACKETS; // 0x204
+volatile uint32_t RMON_T_BC_PKT; // 0x208
+volatile uint32_t RMON_T_MC_PKT; // 0x20C
+volatile uint32_t RMON_T_CRC_ALIGN; // 0x210
+volatile uint32_t RMON_T_UNDERSIZE; // 0x214
+volatile uint32_t RMON_T_OVERSIZE; // 0x218
+volatile uint32_t RMON_T_FRAG; // 0x21C
+volatile uint32_t RMON_T_JAB; // 0x220
+volatile uint32_t RMON_T_COL; // 0x224
+volatile uint32_t RMON_T_P64; // 0x228
+volatile uint32_t RMON_T_P65TO127; // 0x22C
+volatile uint32_t RMON_T_P128TO255; // 0x230
+volatile uint32_t RMON_T_P256TO511; // 0x234
+volatile uint32_t RMON_T_P512TO1023; // 0x238
+volatile uint32_t RMON_T_P1024TO2048; // 0x23C
+volatile uint32_t RMON_T_GTE2048; // 0x240
+volatile uint32_t RMON_T_OCTETS; // 0x244
+volatile uint32_t IEEE_T_DROP; // 0x248
+volatile uint32_t IEEE_T_FRAME_OK; // 0x24C
+volatile uint32_t IEEE_T_1COL; // 0x250
+volatile uint32_t IEEE_T_MCOL; // 0x254
+volatile uint32_t IEEE_T_DEF; // 0x258
+volatile uint32_t IEEE_T_LCOL; // 0x25C
+volatile uint32_t IEEE_T_EXCOL; // 0x260
+volatile uint32_t IEEE_T_MACERR; // 0x264
+volatile uint32_t IEEE_T_CSERR; // 0x268
+volatile uint32_t IEEE_T_SQE; // 0x26C
+volatile uint32_t IEEE_T_FDXFC; // 0x270
+volatile uint32_t IEEE_T_OCTETS_OK; // 0x274
+volatile uint32_t RESERVED13[3]; // 0x278
+volatile uint32_t RMON_R_PACKETS; // 0x284
+volatile uint32_t RMON_R_BC_PKT; // 0x288
+volatile uint32_t RMON_R_MC_PKT; // 0x28C
+volatile uint32_t RMON_R_CRC_ALIGN; // 0x290
+volatile uint32_t RMON_R_UNDERSIZE; // 0x294
+volatile uint32_t RMON_R_OVERSIZE; // 0x298
+volatile uint32_t RMON_R_FRAG; // 0x29C
+volatile uint32_t RMON_R_JAB; // 0x2A0
+volatile uint32_t RESERVED14; // 0x2A4
+volatile uint32_t RMON_R_P64; // 0x2A8
+volatile uint32_t RMON_R_P65TO127; // 0x2AC
+volatile uint32_t RMON_R_P128TO255; // 0x2B0
+volatile uint32_t RMON_R_P256TO511; // 0x2B4
+volatile uint32_t RMON_R_P512TO1023; // 0x2B8
+volatile uint32_t RMON_R_P1024TO2047; // 0x2BC
+volatile uint32_t RMON_R_GTE2048; // 0x2C0
+volatile uint32_t RMON_R_OCTETS; // 0x2C4
+volatile uint32_t IEEE_R_DROP; // 0x2C8
+volatile uint32_t IEEE_R_FRAME_OK; // 0x2CC
+volatile uint32_t IEEE_R_CRC; // 0x2D0
+volatile uint32_t IEEE_R_ALIGN; // 0x2D4
+volatile uint32_t IEEE_R_MACERR; // 0x2D8
+volatile uint32_t IEEE_R_FDXFC; // 0x2DC
+volatile uint32_t IEEE_R_OCTETS_OK; // 0x2E0
+volatile uint32_t RESERVED15[71]; // 0x2E4
+volatile uint32_t ATCR; // 0x400
+volatile uint32_t ATVR; // 0x404
+volatile uint32_t ATOFF; // 0x408
+volatile uint32_t ATPER; // 0x40C
+volatile uint32_t ATCOR; // 0x410
+volatile uint32_t ATINC; // 0x414
+volatile uint32_t ATSTMP; // 0x418
+volatile uint32_t RESERVED16[122]; // 0x41C
+volatile uint32_t TGSR; // 0x604
+volatile uint32_t TCSR0; // 0x608
+volatile uint32_t TCCR0; // 0x60C
+volatile uint32_t TCSR1; // 0x610
+volatile uint32_t TCCR1; // 0x614
+volatile uint32_t TCSR2; // 0x618
+volatile uint32_t TCCR2; // 0x61C
+volatile uint32_t TCSR3; // 0x620
